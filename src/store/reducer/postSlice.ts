@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { url } from "../api";
-import { Posts } from "../models/posts";
+import { Post, Posts } from "../models/posts";
 import { Pages } from "../models/pages";
 
 export const getApi = createApi({
@@ -16,7 +16,11 @@ export const getApi = createApi({
       query: () => "pages",
       providesTags: ["pages"],
     }),
+    getPost: build.query<Post, string>({
+      query: (name) => `posts/${name}`,
+      providesTags: ["posts"],
+    }),
   }),
 });
 
-export const { useGetPagesQuery, useGetPostsQuery } = getApi;
+export const { useGetPagesQuery, useGetPostsQuery, useGetPostQuery } = getApi;

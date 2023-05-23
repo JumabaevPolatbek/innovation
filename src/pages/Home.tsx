@@ -11,8 +11,8 @@ import ServiceSection from '../layouts/ServiceSection';
 import Statistics from '../layouts/Statistics';
 import Testimonials from '../layouts/Testimonials';
 const Home = () => {
-  return <div className="App">
-  <Header />
+  return <>
+  {/* <Header /> */}
   <HeroSection />
   <MenuBox />
   <AboutSection />
@@ -22,7 +22,7 @@ const Home = () => {
   <Statistics />
   <BlogSection />
   <Testimonials />
-  <Footer />
-</div>;
+  {/* <Footer /> */}
+</>;
 };
 export default Home;
