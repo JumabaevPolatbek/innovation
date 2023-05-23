@@ -1,0 +1,213 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.footer {
+    background: url('../../../public/images/footer-back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'DM Sans', 'icomoon';
+    position: relative;
+
+    .layer {
+        background-color: rgba($color: #1a01b6, $alpha: 0.8);
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 50px 30px;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &-info {
+        text-align: center;
+        margin-bottom: 40px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__desc {
+        @include mixins.Tittle2();
+        color: $colorF9;
+    }
+
+    &__logo {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    &-contact {
+        margin-bottom: 40px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        .title {
+            @include mixins.Headline4();
+            color: $colorFC;
+            position: relative;
+            margin-bottom: 20px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: $colorF;
+            }
+        }
+
+        .info {
+            @include mixins.FontBody1();
+            color: $colorF9;
+            margin-bottom: 20px;
+
+            li {
+                padding: 10px 10px 10px 30px;
+                position: relative;
+                font-family: 'DM Sans', 'icomoon';
+
+                &::before {
+                    position: absolute;
+                    top: 10px;
+                    left: 0;
+                }
+
+                &:nth-of-type(1)::before {
+                    content: "\e942";
+                }
+
+                &:nth-of-type(2)::before {
+                    content: "\e908";
+                }
+
+                &:nth-of-type(3)::before {
+                    content: "\e907";
+                }
+
+                &:nth-of-type(4)::before {
+                    content: "\e906";
+                    font-size: 25px;
+                    top: 15px;
+                }
+            }
+
+        }
+
+        .social__links {
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                a {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 7px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: $colorF;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+
+                &:nth-of-type(1) a {
+                    color: rgb(109, 193, 245);
+                }
+
+                &:nth-of-type(3) a {
+                    color: red;
+                }
+
+                &:nth-of-type(4) a {
+                    color: rgb(88, 81, 219);
+                }
+            }
+        }
+    }
+
+    &-location {
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        .title {
+            @include mixins.Headline4();
+            color: $colorFC;
+            position: relative;
+            margin-bottom: 20px;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background-color: $colorF;
+            }
+        }
+
+        .location {
+            width: 100%;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        .container {
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 50px 40px;
+        }
+
+        &-info,
+        &-contact {
+            flex-basis: 48%;
+            max-width: initial;
+
+        }
+
+        &-location {
+            flex-basis: 100%;
+            text-align: center;
+            max-width: initial;
+
+            .location {
+                width: 75%;
+                max-width: 700px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        .container {
+            max-width: 1192px;
+            margin: 0 auto;
+            padding-bottom: 0;
+
+            &>div {
+                flex-basis: 30%;
+            }
+        }
+
+        &-location {
+            .location {
+                width: 100%;
+                max-width: initial;
+            }
+        }
+
+    }
+}

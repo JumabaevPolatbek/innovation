@@ -1,0 +1,23 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.statistics {
+    background-color: $footer-back;
+
+    .container {
+        width: 100%;
+        margin: 40px 0;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 1200px) {
+    .statistics>.container {
+        max-width: 1192px;
+        margin: 128px auto;
+    }
+}

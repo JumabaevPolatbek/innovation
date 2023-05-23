@@ -1,0 +1,52 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section {
+
+        &__content {
+            margin-bottom: 30px;
+            max-width: 520px
+        }
+
+        &__title {
+            @include mixins.Headline2();
+            color: $color2;
+            margin-bottom: 24px;
+        }
+
+        &__description {
+            @include mixins.FontBody2();
+            color: $color5;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            @include mixins.FontBody1();
+            color: $color3;
+            margin-bottom: 32px;
+        }
+
+        &__link {
+            @include mixins.LinkBtn();
+        }
+
+        &__video {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 4px;
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .about-section{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

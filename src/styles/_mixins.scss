@@ -1,0 +1,141 @@
+@mixin Headline1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+
+    @media (min-width: 768px) {
+        font-size: 56px;
+        line-height: 73px;
+    }
+}
+
+@mixin Headline2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 32px;
+
+    @media (min-width: 768px) {
+        font-size: 48px;
+        line-height: 62px;
+    }
+}
+
+@mixin Headline3 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 47px;
+}
+
+@mixin Headline4 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+
+    @media (min-width: 768px) {
+        font-size: 30px;
+        line-height: 39px;
+    }
+}
+
+@mixin Tittle1 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+
+    @media (min-width: 768px) {
+        font-size: 24px;
+        line-height: 31px;
+    }
+}
+
+@mixin Tittle2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@mixin Tittle3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (min-width: 768px) {
+        font-size: 18px;
+        line-height: 23px;
+    }
+}
+
+@mixin Tittle4 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+@mixin FontBody1 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (min-width: 768px) {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@mixin FontBody2 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+
+    @media (min-width: 768px) {
+        font-size: 16px;
+        line-height: 155%;
+    }
+}
+
+@mixin FontBody3 {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 140%;
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 155%;
+    }
+}
+
+@mixin FontButton1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin FontButton2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin LinkBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 6px;
+    background-color: #086CF9;
+    color: #fff;
+    text-decoration: none;
+
+    @media (min-width: 768px) {
+        padding: 16px 32px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

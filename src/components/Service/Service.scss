@@ -1,0 +1,32 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.service{
+    max-width: 248px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+
+    &__img{
+        margin-bottom: 20px;
+    }
+
+    &__title{
+        @include mixins.Tittle1();
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &__desc{
+        @include mixins.FontBody3();
+        text-align: center;
+    }
+}
+
+@media (min-width: 1200px){
+    .service{
+        margin-bottom: 0;
+    }
+}

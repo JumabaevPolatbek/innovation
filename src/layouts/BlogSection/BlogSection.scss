@@ -1,0 +1,80 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.articles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+        @include mixins.Headline2();
+        margin-bottom: 12px;
+    }
+
+    .description {
+        @include mixins.FontBody2();
+        text-align: center;
+        margin-top: -5px;
+        margin-bottom: 35px;
+    }
+
+    .link-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 18px;
+        border-radius: 6px;
+        background-color: $color-blue;
+        color: $colorF;
+        text-decoration: none;
+    }
+
+    & .article {
+        margin-bottom: 30px;
+    }
+}
+
+@media (min-width: 576px) {
+    .articles {
+        .description {
+            width: 419px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .articles {
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+
+            &>.article:not(:last-of-type) {
+                margin-right: 20px;
+            }
+        }
+
+        .link-btn {
+            padding: 16px 32px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .articles {
+        .wrapper {
+            justify-content: space-between;
+            margin-bottom: 30px;
+
+            &>.article {
+                margin: 0;
+            }
+        }
+    }
+}

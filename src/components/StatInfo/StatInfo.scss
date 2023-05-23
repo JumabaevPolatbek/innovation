@@ -1,0 +1,19 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.stat{
+    padding: 20px;
+    .count{
+        @include mixins.Headline2();
+    }
+
+    .info{
+        @include mixins.FontBody2();
+    }
+}
+
+@media (min-width: 1200px) {
+    .stat{
+        padding: 60px 0;
+    }
+}

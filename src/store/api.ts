@@ -1,0 +1,1 @@
+export const url = 'https://nukusinnovatsion.uz/wp-json/wp/v2/'

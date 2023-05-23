@@ -1,0 +1,21 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+
+.testimonials-section {
+    .title {
+        @include mixins.Headline2();
+        color: $color0;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .description {
+        @include mixins.FontBody2();
+        color: $color5;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        max-width: 600px;
+    }
+}

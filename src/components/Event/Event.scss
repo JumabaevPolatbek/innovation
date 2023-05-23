@@ -1,0 +1,85 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.event {
+    position: relative;
+    box-shadow: 0px 12px 45px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 368px;
+
+    &__date {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background-color: $color-blue;
+        color: $colorF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            @include mixins.Tittle3();
+            display: block;
+            text-transform: uppercase;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    &__info {
+        padding: 24px;
+    }
+
+    &__title {
+        @include mixins.Tittle2();
+        margin-bottom: 20px;
+    }
+
+    &__data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+
+        span {
+            @include mixins.FontBody3();
+        }
+    }
+
+    &__time,
+    &__location {
+        padding-left: 15px;
+        position: relative;
+        font-family: 'DM Sans', 'icomoon';
+
+        &::before {
+            position: absolute;
+            left: -5px;
+            top: 2px;
+        }
+    }
+
+    &__time::before {
+        content: "\e900";
+    }
+
+    &__location::before {
+        content: "\e901";
+    }
+}
+
+@media (min-width: 768px){
+    .event{
+        &__date{
+            width: 65px;
+            height: 65px;
+        }
+    }
+}

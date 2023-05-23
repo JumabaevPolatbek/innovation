@@ -1,0 +1,119 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+
+.course {
+    background-color: #ebf0f8;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .5s ease;
+
+    &:hover {
+        background-color: #3569b2;
+
+        .course__type,
+        .course__name {
+            color: $colorF;
+        }
+
+        .course__img {
+            background-color: #244676;
+        }
+
+        .course__type {
+            background-color: rgba(115, 171, 250, 0.3);
+        }
+
+    }
+
+    &__img {
+        width: 150px;
+        clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+        background-color: #3569b2;
+        padding: 15px;
+        padding-left: 50px;
+        transition: all .5s ease;
+
+        img {
+            width: 90%;
+        }
+    }
+
+    &__info {
+        padding: 15px;
+    }
+
+    &__type {
+        background-color: rgba(53, 105, 178, .1);
+        @include mixins.FontBody3();
+        text-transform: uppercase;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 12px;
+        color: $color-blue;
+        margin-bottom: 30px;
+        transition: all .5s ease;
+    }
+
+    &__name {
+        @include mixins.FontBody1();
+        color: $color-blue;
+        font-size: 16px;
+        font-weight: 500;
+        transition: all .5s ease;
+    }
+}
+
+@media (min-width: 576px) {
+    .course {
+        width: 400px;
+
+        &__img {
+            width: 200px;
+            padding-left: 60px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .course {
+        width: 300px;
+
+        &__img {
+            width: 150px;
+            padding-left: 50px;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .course {
+        width: 400px;
+
+        &__img {
+            width: 200px;
+            padding-left: 60px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .course {
+        width: 500px;
+        margin-bottom: 40px;
+
+        &__info {
+            padding: 30px;
+        }
+
+        &__img {
+            width: 250px;
+            padding-left: 75px;
+        }
+    }
+}

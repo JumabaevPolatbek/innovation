@@ -1,0 +1,66 @@
+@use 'src/styles/mixins.scss';
+@import 'src/styles/variables.scss';
+
+.courses-section {
+    .title {
+        @include mixins.Headline2();
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .tabs {
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+        @include mixins.FontBody2();
+        margin-bottom: 20px;
+
+        li.active {
+            color: green;
+
+            &::after {
+                background-color: green;
+            }
+        }
+
+        li {
+            display: inline-block;
+            cursor: pointer;
+            padding: 10px 20px;
+            color: $color-blue;
+            position: relative;
+            transition: all .5s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: transparent;
+                transition: all .5s ease;
+
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .courses-section {
+        .tabs {
+            overflow-x: hidden;
+        }
+
+        .tab__content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+
+            &>div {
+                flex-basis: 48%;
+            }
+        }
+    }
+}
