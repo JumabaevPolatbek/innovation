@@ -9,7 +9,7 @@ const Header = () => {
                 <HeaderTop />
                 <HeaderMiddle />
                 <div className="logo">
-                    <img src="https://nukusinnovatsion.uz/wp-content/uploads/2023/02/cropped-IMG_20230209_063639_756-1-60x60.png" alt="logo" />
+                    <img src="/images/NII.png" alt="logo" />
                 </div>
         </header>
     )

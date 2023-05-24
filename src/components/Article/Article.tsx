@@ -1,4 +1,5 @@
 import { Post } from "../../store/models/posts";
+import { Link } from "react-router-dom";
 import "./Article.scss";
 
 const Article: React.FC<Post> = (props) => {
@@ -12,9 +13,9 @@ const Article: React.FC<Post> = (props) => {
           dangerouslySetInnerHTML={{ __html: title.rendered }}
         ></h3>
         <p className="article__text">{excerpt.rendered}</p>
-        <a href={`post/${id}`} className="article__link">
+        <Link to={`posts/${id}`} className="article__link">
           Oqish...
-        </a>
+        </Link>
       </div>
     </article>
   );

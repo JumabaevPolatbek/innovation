@@ -14,6 +14,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Post from "./pages/Post";
 import Layout from "./pages/Layout";
+import Posts from "./pages/Posts";
 function App() {
   return (
     <div className="App">
@@ -21,7 +22,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="post/:id" element={<Post />} />
+            <Route path="posts">
+              <Route index element={<Posts/>}/>
+              <Route path=":id" element={<Post/>}/>
+            </Route>
+            {/* <Route path="post/:id" element={<Post />} /> */}
           </Route>
           {/* <Route path="/post">
             <Route path=":id" element={<Post />} />
