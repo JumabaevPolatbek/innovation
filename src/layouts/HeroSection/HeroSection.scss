@@ -21,17 +21,23 @@
         .slick-next {
             right: 0;
         }
+        .slick-track{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     }
 
     .item {
         position: relative;
         min-height: 180px;
         max-height: 500px;
-        height: 500px;
+        // height: 500px;
+        width: 100%;
         img {
             width: 100%;
-            height: auto;
-            object-fit: cover;
+            height: 100%;
+            // object-fit: cover;
         }
     }
 

@@ -6,7 +6,7 @@ import '../App.scss'
 import { useParams } from "react-router-dom"
 import { useGetPostQuery } from "../store/reducer/postSlice"
 
-const Post: React.FC<any> = () => {
+const PostPage: React.FC<any> = () => {
     const { id } = useParams()
     const {data}=useGetPostQuery(id ||' ')
     console.log(data)
@@ -15,4 +15,4 @@ const Post: React.FC<any> = () => {
             </>
     )
  }
-export default Post
+export default PostPage

@@ -12,9 +12,9 @@ import "./App.scss";
 // import Testimonials from './layouts/Testimonials';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Post from "./pages/Post";
 import Layout from "./pages/Layout";
 import Posts from "./pages/Posts";
+import PostSection from "./layouts/PostSection";
 function App() {
   return (
     <div className="App">
@@ -23,14 +23,10 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="posts">
-              <Route index element={<Posts/>}/>
-              <Route path=":id" element={<Post/>}/>
+              <Route index element={<Posts />} />
+              <Route path=":id" element={<PostSection />} />
             </Route>
-            {/* <Route path="post/:id" element={<Post />} /> */}
           </Route>
-          {/* <Route path="/post">
-            <Route path=":id" element={<Post />} />
-          </Route> */}
         </Routes>
       </BrowserRouter>
     </div>
